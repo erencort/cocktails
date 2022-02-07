@@ -1,0 +1,21 @@
+.app__filter-input {
+    background-color: #424642;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app__filter-input input {
+    padding: .7rem;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.app__filter-input input:focus {
+    outline: none;
+}
+
+.app__filter-input input:hover {
+    border: 2px solid black;
+}

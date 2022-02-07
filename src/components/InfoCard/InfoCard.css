@@ -1,0 +1,30 @@
+
+.app__card {
+    width: 500px;
+    height: 600px;
+    background-color: #C06014;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    margin: 4rem;
+}
+
+.app__card img {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.app__card-name {
+    font-size: 50px;
+    margin-top: 1rem;
+}
+
+.app__card-instructions {
+    margin-top: 2rem;
+    font-size: 25px;
+    margin-bottom: 5rem;
+}

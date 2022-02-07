@@ -1,0 +1,18 @@
+.app__navbar {
+    background-color: #536162;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__navbar-logo h2 {
+    font-size: 40px;
+}
