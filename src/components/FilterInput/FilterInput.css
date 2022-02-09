@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    min-width: 100%;
 }
 
 .app__filter-input input {
@@ -17,5 +18,19 @@
 }
 
 .app__filter-input input:hover {
+    border: 2px solid black;
+}
+
+.app__filter-input button {
+    padding: .7rem;
+    margin-left: 2rem;
+    border-radius: 7px;
+}
+
+.app__filter-input button:focus {
+    outline: none;
+}
+
+.app__filter-input button:hover {
     border: 2px solid black;
 }

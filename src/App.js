@@ -1,7 +1,6 @@
 import "./App.css";
 import Home from "./Pages/Home";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { CocktailContext } from "./context/cocktailContext";
 
 function App() {
@@ -10,13 +9,25 @@ function App() {
 
   useEffect(() => {
     getCocktails();
-  }, []);
+  }, [filterQuery]);
 
   const getCocktails = async () => {
-    const { data } = await axios.get(
-      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
-    );
-    setCocktails(data.drinks);
+    await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${filterQuery}`
+    )
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          console.log("Something went wrong");
+        }
+      })
+      .then((responseJson) => {
+        setCocktails(responseJson.drinks);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const data = {

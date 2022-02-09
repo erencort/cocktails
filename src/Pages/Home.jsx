@@ -1,15 +1,11 @@
 import Navbar from "../components/Navbar/Navbar";
-import React, { useEffect } from "react";
+import React from "react";
 import FilterInput from "../components/FilterInput/FilterInput";
 import InfoCard from "../components/InfoCard/InfoCard";
 import { CocktailContext, useContext } from "../context/cocktailContext";
 
 function Home() {
   const data = useContext(CocktailContext);
-
-  useEffect(() => {
-    console.log(data.cocktails);
-  }, []);
 
   return (
     <>
@@ -27,5 +23,7 @@ function Home() {
     </>
   );
 }
+
+
 
 export default Home;
